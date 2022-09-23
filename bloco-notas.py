@@ -26,7 +26,24 @@ while continuar_usando == 1:
         lista_de_tarefas.append(tarefa)
         print('\nSua lista de tarefas')
         print(lista_de_tarefas)
-        continuar_usando1 = input('\nDeseja continuar incluindo? 1 para continuar, 2 para voltar para o menu ou PARE para sair: ')
+        continuar_usando1 = input("\nDeseja continuar incluindo? 1 para continuar, 2 para voltar para o menu ou 'sair' para sair: ")
+        if continuar_usando1.isnumeric():
+            while continuar_usando1 == '1':
+                tarefa = input('\nDigite tarefa a ser adicionada: ')
+                lista_de_tarefas.append(tarefa)
+                print(lista_de_tarefas)
+            else:
+                continuar_usando1= input('\nDeseja continuar incluindo? 1 para continuar, 2 para voltar para o menu ou 3 para sair: ')
+        else:
+           break
+            
+
+    elif opcao_do_menu == 2:
+        print('Opção escolhida: 2 - Ver lista de tarefa.')
+        opcao_do_menu = 0
+        print('\nSua lista de tarefas')
+        print(lista_de_tarefas)
+        continuar_usando1 = input('\nInsira 1 para voltar para o menu ou PARE para sair: ')
         if continuar_usando1.isnumeric():
           if continuar_usando1 == '1':
             tarefa = input('\nDigite tarefa a ser adicionada: ')
@@ -37,16 +54,7 @@ while continuar_usando == 1:
           else:
             continuar_usando1= input('\nDeseja continuar incluindo? 1 para continuar, 2 para voltar para o menu ou PARE para sair: ')
         else:
-           break
-            
-
-    elif opcao_do_menu == 2:
-        print('Opção escolhida: 2 - Ver lista de tarefa.')
-        opcao_do_menu = 0
-        print('\nSua lista de tarefas')
-        print(lista_de_tarefas)
-        menu()
-        opcao_do_menu = int(input('Qual o número ação você quer fazer? '))    
+           break  
 
     elif opcao_do_menu == 3:
         print('Opção escolhida: 3 - Excluir tarefa salva.')
