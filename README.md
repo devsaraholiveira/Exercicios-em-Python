@@ -1,2 +1,1 @@
-# projetos1
-backup ced
+Exercicios e projetos na linguagem PYTHON.
